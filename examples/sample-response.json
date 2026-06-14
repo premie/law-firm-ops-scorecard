@@ -1,0 +1,13 @@
+{
+  "firm": "Sample PI Firm",
+  "responses": {
+    "intake_case_launch": [3, 2, 2, 1],
+    "case_management_integrations": [2, 2, 1, 1],
+    "ai_supervision": [1, 1, 0, 1],
+    "client_communication": [2, 2, 1, 2],
+    "documents_esignature": [2, 1, 2, 1],
+    "finance_trust_operations": [2, 1, 1, 0],
+    "staffing_sops_accountability": [2, 2, 1, 1],
+    "reporting_kpis": [1, 1, 1, 0]
+  }
+}

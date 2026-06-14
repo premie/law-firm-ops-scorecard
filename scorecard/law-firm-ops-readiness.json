@@ -1,0 +1,121 @@
+{
+  "schemaVersion": "0.1.0",
+  "title": "Law Firm Operations Readiness Scorecard",
+  "description": "A generic, public-safe scorecard for law firms evaluating operational maturity before adding supervised automation or AI-agent workflows.",
+  "scale": {
+    "0": "Not in place",
+    "1": "Ad hoc / inconsistent",
+    "2": "Documented but not fully measured",
+    "3": "Reliable, owned, measured, and improvable"
+  },
+  "categories": [
+    {
+      "id": "intake_case_launch",
+      "title": "Intake & Case Launch",
+      "whyItMatters": "New matters lose momentum when qualification, signing, opening, and first-touch tasks live in separate handoffs.",
+      "questions": [
+        "Can staff see every new lead or signed client in one trusted queue?",
+        "Is the handoff from intake to case launch documented with a clear owner?",
+        "Are missing signatures, documents, and eligibility gaps visible before they stall a matter?",
+        "Can the firm measure how long it takes to move from signed client to opened matter?"
+      ]
+    },
+    {
+      "id": "case_management_integrations",
+      "title": "Case Management, Technology & Integrations",
+      "whyItMatters": "Practice-management software works better when email, phones, documents, calendars, and tasks are connected instead of manually reconciled.",
+      "questions": [
+        "Is the practice-management system treated as the primary matter record?",
+        "Do staff avoid duplicate entry across email, documents, phones, and tasks?",
+        "Can operators trace a workflow step back to the source system that produced it?",
+        "Are integration failures visible quickly enough for someone to fix them?"
+      ]
+    },
+    {
+      "id": "ai_supervision",
+      "title": "AI Supervision & Agent Readiness",
+      "whyItMatters": "AI is safer and more useful when it starts read-only, cites sources, and waits for human approval before meaningful writes.",
+      "questions": [
+        "Can AI or automation answer read-only operating questions before it is allowed to act?",
+        "Are human approval gates defined for client messages, tasks, notes, and system updates?",
+        "Can staff see why an agent recommended an action and which records it used?",
+        "Are prohibited actions, confidentiality rules, and attorney-judgment boundaries documented?"
+      ]
+    },
+    {
+      "id": "client_communication",
+      "title": "Client Communication",
+      "whyItMatters": "Clients usually call when update rhythms, ownership, or case status visibility have broken down.",
+      "questions": [
+        "Does every active matter have an owner for client communication?",
+        "Are stale-contact risks visible before clients have to chase the firm?",
+        "Can staff draft updates from current matter context without searching multiple systems?",
+        "Are sensitive or external messages reviewed before being sent?"
+      ]
+    },
+    {
+      "id": "documents_esignature",
+      "title": "Documents & E-Signature",
+      "whyItMatters": "Document work stalls when templates, signatures, storage, and status tracking are handled as separate manual chores.",
+      "questions": [
+        "Are common document packets generated from approved templates?",
+        "Can the firm see which signature or document requests are outstanding?",
+        "Are signed documents filed back to the correct matter without manual hunting?",
+        "Is there a defined review step before important documents are sent externally?"
+      ]
+    },
+    {
+      "id": "finance_trust_operations",
+      "title": "Finance, Billing & Trust Operations",
+      "whyItMatters": "Money workflows need tight approvals, source records, and reconciliation because mistakes create operational and ethical risk.",
+      "questions": [
+        "Are payment requests, lien steps, reimbursements, or vendor bills routed through a clear approval path?",
+        "Can finance-related matter activity be tied back to source records?",
+        "Are trust-sensitive steps separated from general operational tasks?",
+        "Can the firm measure pending financial approvals or unresolved money-work bottlenecks?"
+      ]
+    },
+    {
+      "id": "staffing_sops_accountability",
+      "title": "Staffing, SOPs & Accountability",
+      "whyItMatters": "Automation fails when nobody owns the underlying process or when the SOP lives only in a person's head.",
+      "questions": [
+        "Does each recurring workflow have a named owner and backup?",
+        "Are SOPs written in enough detail for another trained person to execute them?",
+        "Can managers see where work is waiting without interrupting staff for status reports?",
+        "Are exceptions and escalations routed to the right person instead of sitting invisible?"
+      ]
+    },
+    {
+      "id": "reporting_kpis",
+      "title": "Reporting & KPIs",
+      "whyItMatters": "Owners need reliable operating signals, not one-off spreadsheets assembled only after something feels wrong.",
+      "questions": [
+        "Does the firm track the bottlenecks that matter most for its practice area?",
+        "Can reports separate current work from stale, duplicate, or already-resolved items?",
+        "Are KPIs refreshed from source systems rather than manually rebuilt each time?",
+        "Do managers use the numbers to change workflows, staffing, or review rules?"
+      ]
+    }
+  ],
+  "bands": [
+    {
+      "minPercent": 0,
+      "maxPercent": 39,
+      "label": "Fragile operations",
+      "guidance": "Start by naming owners, documenting the highest-volume workflow, and making the current queue visible before adding automation."
+    },
+    {
+      "minPercent": 40,
+      "maxPercent": 69,
+      "label": "Automation candidate",
+      "guidance": "Pick one read-only visibility workflow first, then add supervised write actions after approval rules are clear."
+    },
+    {
+      "minPercent": 70,
+      "maxPercent": 100,
+      "label": "Agent-OS ready",
+      "guidance": "The firm likely has enough ownership, source data, and review discipline to pilot supervised AI-agent workflows safely."
+    }
+  ]
+}

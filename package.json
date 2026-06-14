@@ -1,0 +1,32 @@
+{
+  "name": "law-firm-ops-scorecard",
+  "version": "0.1.0",
+  "description": "A public-safe operations readiness scorecard for law firms evaluating systems, supervision, and AI-agent deployment.",
+  "type": "module",
+  "bin": {
+    "law-firm-ops-score": "./score.mjs"
+  },
+  "scripts": {
+    "score:sample": "node score.mjs examples/sample-response.json",
+    "test": "node test/score.test.mjs"
+  },
+  "keywords": [
+    "law-firm",
+    "legal-ops",
+    "legaltech",
+    "operations",
+    "ai-agents",
+    "scorecard",
+    "clio"
+  ],
+  "homepage": "https://firmops.io/",
+  "author": "FirmOps",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/premie/law-firm-ops-scorecard.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
