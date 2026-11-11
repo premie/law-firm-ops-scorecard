@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Law Firm Ops Readiness Scorecard | FirmOps</title>
+    <meta
+      name="description"
+      content="A public-safe operations readiness scorecard and CLI for law firms evaluating systems, supervision, and AI-agent workflows. Maintained by FirmOps."
+    />
+    <link rel="canonical" href="https://premie.github.io/law-firm-ops-scorecard/" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="site-header">
+        <p class="brand"><a href="https://firmops.io/">FirmOps</a></p>
+        <nav aria-label="Project links">
+          <a href="https://github.com/premie/law-firm-ops-scorecard">GitHub</a>
+          <a href="https://firmops.io/">firmops.io</a>
+        </nav>
+      </header>
+
+      <main>
+        <p class="meta">Public scorecard · MIT license</p>
+        <h1>Law Firm Ops Readiness Scorecard</h1>
+        <p class="lede">
+          Maintained by <a href="https://firmops.io/">FirmOps</a>, this public
+          scorecard helps law firm owners and operators evaluate whether their
+          operations are ready for supervised automation, connected systems, and
+          AI-agent workflows.
+        </p>
+        <p>
+          The scorecard is intentionally generic and public-safe. It does not
+          include private client data, law-firm case details, internal prompts,
+          credentials, or proprietary implementation code.
+        </p>
+
+        <h2>What it measures</h2>
+        <p>The model scores eight operational areas:</p>
+        <ol>
+          <li>Intake &amp; case launch</li>
+          <li>Case management, technology &amp; integrations</li>
+          <li>AI supervision &amp; agent readiness</li>
+          <li>Client communication</li>
+          <li>Documents &amp; e-signature</li>
+          <li>Finance, billing &amp; trust operations</li>
+          <li>Staffing, SOPs &amp; accountability</li>
+          <li>Reporting &amp; KPIs</li>
+        </ol>
+
+        <h2>How scoring works</h2>
+        <p>Each question is scored from <code>0</code> to <code>3</code>:</p>
+        <ul class="scale">
+          <li><code>0</code> — Not in place</li>
+          <li><code>1</code> — Ad hoc / inconsistent</li>
+          <li><code>2</code> — Documented but not fully measured</li>
+          <li><code>3</code> — Reliable, owned, measured, and improvable</li>
+        </ul>
+
+        <h2>Readiness bands</h2>
+        <ul class="bands">
+          <li>
+            <strong>0–39%:</strong> Fragile operations — document ownership and
+            make the current queue visible first.
+          </li>
+          <li>
+            <strong>40–69%:</strong> Automation candidate — start with read-only
+            visibility, then supervised write actions.
+          </li>
+          <li>
+            <strong>70–100%:</strong> Agent-OS ready — the firm likely has enough
+            ownership, source data, and review discipline to pilot supervised
+            AI-agent workflows safely.
+          </li>
+        </ul>
+
+        <h2>Safety principles</h2>
+        <p>This project assumes law-firm automation should start with guardrails:</p>
+        <ul>
+          <li>Read before write.</li>
+          <li>Cite the source system behind recommendations.</li>
+          <li>
+            Require human approval before external messages or system-of-record
+            updates.
+          </li>
+          <li>
+            Keep attorney judgment, confidentiality, and trust-sensitive actions
+            out of unsupervised automation.
+          </li>
+        </ul>
+
+        <h2>Quick start</h2>
+        <p>
+          The scoring model lives at
+          <code>scorecard/law-firm-ops-readiness.json</code>. Run the sample
+          score with Node 18+:
+        </p>
+        <pre><code>node score.mjs examples/sample-response.json</code></pre>
+        <p>A firm can also use the JSON model without code:</p>
+        <ol>
+          <li>Review each category.</li>
+          <li>Score every question from <code>0</code> to <code>3</code>.</li>
+          <li>Add the scores for each category.</li>
+          <li>
+            Divide by the maximum possible score to find the readiness
+            percentage.
+          </li>
+          <li>Start with the weakest category before adding more automation.</li>
+        </ol>
+        <p>
+          Source, CLI, and sample response:
+          <a href="https://github.com/premie/law-firm-ops-scorecard">github.com/premie/law-firm-ops-scorecard</a>.
+        </p>
+
+        <p class="note">
+          This is a lightweight open-source template and scoring utility. It is
+          not legal advice and is not a substitute for professional judgment,
+          ethics review, security review, or jurisdiction-specific compliance
+          work.
+        </p>
+      </main>
+
+      <footer class="site-footer">
+        <p>
+          Maintained by <a href="https://firmops.io/">FirmOps</a>, a Vertana
+          brand. Legal entity: Cadence Management and Consulting LLC. Released
+          under the MIT License.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
